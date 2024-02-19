@@ -1,0 +1,73 @@
+@font-face {
+    font-family: anybody;
+    src: url(anybody/fonts/webfonts/AnybodyExtraExpanded-SemiBoldItalic.woff2);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+marquee {
+    z-index: 5;
+}
+
+#welcome {
+    font-size: 3vw;
+    font-family: anybody;
+    color: lightgoldenrodyellow;
+    -webkit-text-stroke: 2px grey;
+}
+
+#fc1 {
+    z-index: 1;
+    top: 10vh;
+    left: 10vw;
+    max-width: 20vw;
+    position: fixed;
+}
+
+#fc2 {
+    z-index: 1;
+    top: 28vh;
+    left: 35vw;
+    max-width: 20vw;
+    position: fixed;
+    cursor: url("bikini.png"), auto;
+}
+
+#fc1:hover {
+    animation-name: rotateAnimation;
+    animation-duration: 3s;
+    animation-direction: reverse;
+}
+
+#fc1::after {
+    max-width: 15vw;
+}
+
+#fc {
+    max-height: max-content;
+    animation-name: rotateAnimation;
+    animation-duration: 1ms;
+    animation-direction: reverse;
+    animation-timeline: scroll(block nearest);
+}
+
+#bg {
+    position: fixed;
+    left: 0;
+    top: 50vh;
+    z-index: -1;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
