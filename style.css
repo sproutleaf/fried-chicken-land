@@ -57,6 +57,7 @@ marquee {
 
 #bg {
     position: fixed;
+    max-width: 100vw;
     left: 0;
     top: 50vh;
     z-index: -1;
